@@ -12,7 +12,7 @@ public class SpringAzureDemoApplication {
 
 	@GetMapping("/message/{name}")
 	public String message(@PathVariable String name) {
-		String msg = "This application has been hosted over Azure by: " + name;
+		String msg = "This application has been hosted over Azure by: " + name + "appending new string here";
 		return msg;
 	}
 
