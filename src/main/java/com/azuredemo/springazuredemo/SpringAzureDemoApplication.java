@@ -16,6 +16,12 @@ public class SpringAzureDemoApplication {
 		return msg;
 	}
 
+	@GetMapping("/message/{id}")
+	public String newmessage(@PathVariable String id) {
+		String msg = "This response is received via new endpoint deployed through Azure: " + id;
+		return msg;
+	}
+
 	public static void main(String[] args) {
 		SpringApplication.run(SpringAzureDemoApplication.class, args);
 	}
